@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Usuários</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 400px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .erro {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 3px;
+    }
+    .sucesso {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #c8f7c5;
+      border: 1px solid #2f8f2f;
+      color: #2f8f2f;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Usuário</h1>
+  <form id="formCadastro" novalidate>
+    <label>
+      Nome:
+      <input type="text" id="nome" />
+      <div class="erro" id="erroNome"></div>
+    </label>
+    <label>
+      Usuário:
+      <input type="text" id="usuario" />
+      <div class="erro" id="erroUsuario"></div>
+    </label>
+    <label>
+      Senha:
+      <input type="password" id="senha" />
+      <div class="erro" id="erroSenha"></div>
+    </label>
+    <label>
+      Email:
+      <input type="email" id="email" />
+      <div class="erro" id="erroEmail"></div>
+    </label>
+    <label>
+      Data de nascimento:
+      <input type="date" id="dataNascimento" />
+      <div class="erro" id="erroDataNascimento"></div>
+    </label>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+  <div id="mensagemSucesso" class="sucesso" style="display:none"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
